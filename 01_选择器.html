@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* id*=section 表示id包含section字段的div元素被选中 */
+      /* ^= 表示开头 */
+      /* $= 表示结尾 */
+      div[class*='section'] {
+        color: yellow;
+      }
+      div[class^='sec1'] {
+        border: 1px solid red;
+      }
+      div[class$='tion10'] {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="section1">section1</div>
+    <!-- Emmet语法 div.section$@2*9{section$@2} -->
+    <div class="sec1tion2">sec1tion2</div>
+    <div class="section3">section3</div>
+    <div class="section4">section4</div>
+    <div class="section5">section5</div>
+    <div class="section6">section6</div>
+    <div class="section7">section7</div>
+    <div class="section8">section8</div>
+    <div class="section9">section9</div>
+    <div class="section10">section10</div>
+    <div class="section11">section11</div>
+  </body>
+</html>
