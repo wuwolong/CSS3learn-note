@@ -18,6 +18,18 @@
       div[class$='tion10'] {
         border: 1px solid blue;
       }
+      /* 联系超链接结尾为 \ htm html的结尾添加 web网页内容
+        超链接结尾为.jpg .gif的添加 图片内容
+      */
+      a[href$='.jpg']::after,
+      a[href$='.gif']::after {
+        content: '图片内容';
+      }
+      a[href$='/html']::after,
+      a[href$='/htm']::after,
+      a[href$='\g/']:after {
+        content: 'web网页内容';
+      }
     </style>
   </head>
   <body>
@@ -33,5 +45,7 @@
     <div class="section9">section9</div>
     <div class="section10">section10</div>
     <div class="section11">section11</div>
+    <a href="https://www.baidu.com/">百度</a>
+    <a href="https://www.baidu.com/img/baidu_jgylogo3.gif">百度图片</a>
   </body>
 </html>
