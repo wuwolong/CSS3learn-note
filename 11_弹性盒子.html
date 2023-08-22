@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      flex模型的几个概念
+        1.主轴 可以通过flex-direction来设置
+        2.交叉轴 垂直与主轴
+        3.flex容器 display:flex
+        4.flex项目item 容器里面的子元素
+      几个api
+        1.flex缩写形式 flex-grown flex-shrink flex-basic
+            单值语法：值必须是以下之一：
+            一个 <flex-grow> 的有效值：此时简写会扩展为 flex: <flex-grow> 1 0。
+            一个 <flex-basis> 的有效值：此时简写会扩展为 flex: 1 1 <flex-basis>。
+            关键字 none 或者全局关键字之一。
+            flex:1 1 1 0 flex:200px 1 1 200px
+            双值语法：
+            第一个值必须是一个 flex-grow 的有效值。
+            第二个值必须是以下之一：
+            一个 flex-shrink 的有效值：此时简写会扩展为 flex: <flex-grow> <flex-shrink> 0。
+            一个 flex-basis 的有效值：此时简写会扩展为 flex: <flex-grow> 1 <flex-basis>。
+        2.align-items 设置交叉轴的对齐方式,可以给item设置align-self覆盖flex容器设置的align-items属性
+              默认值是stretch,会使所有flex项目沿交叉轴方向填满flex容器
+              center item保持交叉轴原有长度,并在交叉轴上居中对齐
+              flex-start item保持交叉轴原有长度,并在交叉轴上开始对齐
+              flex-end item保持交叉轴原有长度,并在交叉轴上结束对齐
+        3.flex项目排序
+              order 默认值是0
+              order 值大的 flex 项比 order 值小的在显示顺序中更靠后
+      */
+    </script>
+  </body>
+</html>
