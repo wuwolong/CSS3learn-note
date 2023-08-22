@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+      这玩意是针对 ul父元素的第几个子元素且恰好是li的元素 也就是两个条件 第几个子元素 这个元素是不是li
+      first-child 	: 第一个子元素
+      last-child 	: 最后一个子元素
+      nth-child() 	: 指定位置的子元素
+      nth-last-child() : 指定倒数第几个
+
+      这玩意的意思就是在同一个父元素下第几个类型为h1的元素
+      nth-of-type() 	: 指定类型的子元素
+      nth-last-of-type() : 指定倒数第几个
+      first-of-type 	: 指定类型的第一个子元素
+      last-of-type 	: 指定类型的最后一个子元素
+      only-of-type 	: 指定类型的唯一子元素
+      
+      */
+      .c1:first-child {
+        color: red;
+      }
+      .c1:last-of-type {
+        color: blue;
+      }
+      li:nth-child(2) {
+        color: green;
+      }
+      li:nth-last-child(2) {
+        color: yellow;
+      }
+      li:nth-child(3n) {
+        color: purple;
+      }
+      li:nth-last-child(3n) {
+        color: orange;
+      }
+      /* 需求odd h1为yellow even h1 为Skyblue */
+      h1:nth-of-type(odd) {
+        background-color: yellow;
+      }
+      h1:nth-of-type(even) {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="c1">1</li>
+      <li class="c1">2</li>
+      <li class="3">3</li>
+      <li class="4">4</li>
+      <li class="5">5</li>
+      <li class="6">6</li>
+      <li class="7">7</li>
+      <li class="8">8</li>
+      <li class="9">9</li>
+      <li class="10">10</li>
+    </ul>
+    <div>
+      <h1>我是第1个h1</h1>
+      <p>我是第1个p</p>
+      <h1>我是第2个h1</h1>
+      <p>我是第2个p</p>
+      <h1>我是第3个h1</h1>
+      <p>我是第3个p</p>
+      <h1>我是第4个h1</h1>
+      <p>我是第4个p</p>
+      <h1>我是第5个h1</h1>
+      <p>我是第5个p</p>
+      <h1>我是第6个h1</h1>
+      <p>我是第6个p</p>
+      <h1>我是第7个h1</h1>
+      <p>我是第7个p</p>
+      <h1>我是第8个h1</h1>
+      <p>我是第8个p</p>
+      <h1>我是第9个h1</h1>
+      <p>我是第9个p</p>
+    </div>
+  </body>
+</html>

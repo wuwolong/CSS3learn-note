@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        width: 500px;
+        margin: 100px auto;
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        background-color: #ccc;
+        margin-top: 2px;
+        padding: 5px;
+        padding-left: 20px;
+      }
+      li.done {
+        background: #ccff99;
+      }
+      li.done::before {
+        content: '✔';
+        color: green;
+        margin-right: 5px;
+        margin-left: -1em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Buy milk</li>
+      <li>Take the dog for a walk</li>
+      <li>Exercise</li>
+      <li>Write code</li>
+      <li>Play music</li>
+      <li>Relax</li>
+    </ul>
+    <script>
+      const Ul = document.querySelector('ul')
+      Ul.addEventListener('click', function (e) {
+        console.log(123)
+        e.target.classList.toggle('done')
+      })
+    </script>
+  </body>
+</html>

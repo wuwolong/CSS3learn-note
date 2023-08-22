@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      background
+        background-size:cover 将图片完全铺开撑满整个盒子
+                        contain 保持图片的比例放大,有可能出现没有被图片覆盖的区域,要门放大满足宽要么放大满足高
+        background-position 坐标系统 左上角是(0,0),默认值也就是(0,0)
+                            left:(0,center)
+                            right(100%,center)
+                            top:(center,0)
+                            bottom(center,100%)
+                            center center
+                            百分比:从相应的容器尺寸中减去背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
+                              (container width - image width) * (position x%) = (x offset value)
+                              (container height - image height) * (position y%) = (y offset value)
+        background-orign 指定背景图片background-image 属性的原点位置的背景相对区域。
+                          background-origin: border-box
+                          background-origin: padding-box(默认值)
+                          background-origin: content-box
+                          background-origin: inherit
+      */
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 100%;
+        height: 100vh;
+        border: 1px solid red;
+        background-image: url(./balloons.jpg);
+        background-repeat: no-repeat;
+        background-position: top 20px right 10px;
+        /* background-size: contain; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

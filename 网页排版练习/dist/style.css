@@ -1,0 +1,74 @@
+body {
+  font-size: 10px;
+  font-family: serif;
+  padding: 0;
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+body a {
+  color: #b37775;
+}
+body h1,
+body h2 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+body header {
+  border: 2px solid #b37775;
+  border-right: none;
+  border-left: none;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+body main {
+  display: flex;
+}
+body main h2 {
+  font-size: 2.5em;
+}
+body main section,
+body main aside,
+body main nav {
+  padding: 20px;
+}
+body main section {
+  width: 50%;
+}
+body main aside {
+  width: 30%;
+}
+body main aside ul > li {
+  margin-bottom: 10px;
+}
+body main nav {
+  width: 20%;
+}
+body main nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+body main nav ul > li {
+  list-style: none;
+  font-size: 2.5em;
+  border: 1px solid #b37775;
+  padding: 10px;
+  text-align: center;
+}
+body main nav ul > li a {
+  text-decoration: none;
+}
+body footer {
+  border-top: 2px solid #b37775;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+body footer p {
+  font-size: 2em;
+  text-align: center;
+}

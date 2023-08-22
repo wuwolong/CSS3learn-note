@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+    1.块级盒子的行为
+      盒子会在内联方向拓展并占据父容器该方向的所有空间,在绝大多数情况下盒子会和父容器一样宽,除非显式地设置宽度;
+      每个盒子都会换行
+      width和height会发生作用
+      padding margin border会将其他盒子从当前盒子推开
+    2.行内盒子的行为
+      盒子不会产生换行。
+      width 和 height 属性将不起作用。
+      垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline 状态的盒子推开。
+      水平方向的内边距、外边距以及边框会被应用且会把其他处于 inline 状态的盒子推开。
+    3.盒模型的各个部分
+      content box 内容盒子,在标准盒模型中,width和height属性会影响内容盒子的大小
+      padding box 内边距盒子
+      margin box 外边距盒子
+      border box 边框盒子
+    4.外边距折叠
+      如果有两个外边距接临的元素,这些垂直方向外边距将合并为一个外边距,即最大的单个外边距的大小
+      有三种情况会形成外边距折叠：
+
+      相邻的兄弟元素
+      相邻的同级元素之间的外边距会被折叠（除非后面的元素需要清除之前的浮动）。
+
+      没有内容将父元素和后代元素分开
+      如果没有设定边框（border）、内边距（padding）、行级（inline）内容，也没有创建区块格式化上下文或间隙来分隔块级元素的上边距（margin-top）与其内一个或多个子代块级元素的上边距（margin-top）；或者没有设定边框、内边距、行级内容、高度（height）或最小高度（min-height）来分隔块级元素的下边距（margin-bottom）与其内部的一个或多个后代后代块元素的下边距（margin-bottom），则会出现这些外边距的折叠，重叠部分最终会溢出到父代元素的外面。
+
+      空的区块
+      如果块级元素没有设定边框、内边距、行级内容、高度（height）、最小高度（min-height）来分隔块级元素的上边距（margin-top）及其下边距（margin-bottom），则会出现其上下外边距的折叠。
+      5.inline-block
+        width和height会生效margin padding border会推开其他盒子,但不会换行
+    **/
+    </script>
+    <style>
+      /* span {
+        background-color: orange;
+        padding: 20px;
+      }
+      /* 所有元素都使用替代(IE)模式 */
+      /* html {
+        box-sizing: border-box;
+      }
+      *,
+      *::after,
+      *::after {
+        box-sizing: inherit;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <span>
+      垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline
+      状态的盒子推开。 水平方向的内边距、外边距以及边框会被应用且会把其他处于
+      inline 状态的盒子推开。</span
+    >
+    <span>
+      垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline
+      状态的盒子推开。 水平方向的内边距、外边距以及边框会被应用且会把其他处于
+      inline 状态的盒子推开。</span
+    > -->
+    <!--  块级元素内部的外边距折叠：-->
+    <div style="margin-top: 10px; margin-bottom: 10px">
+      <div style="margin-top: 10px; margin-bottom: 10px">123</div>
+    </div>
+  </body>
+</html>
