@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+      概念：column row gutter
+      grid-column 写法 grid-column start/end  start /span offest
+      grid-row  写法 grid-row start/end  start /span offest
+      grid-area 
+      */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        /* fr分配的是可用空间也就是剩余空间的概念和flex-grow的概念类似*/
+        /* grid-template-columns: 200px 200px 200px; */
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas:
+          'header header'
+          'nav main'
+          'footer footer';
+        list-style: none;
+        width: 100vw;
+        height: 100vh;
+        margin-right: 0;
+        border: 1px solid #000;
+      }
+      li {
+        background-color: skyblue;
+        padding: 10px;
+        background-clip: content-box;
+      }
+      .header {
+        grid-area: header;
+      }
+      .nav {
+        grid-area: nav;
+      }
+      .main {
+        grid-area: main;
+      }
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li class="header">header</li>
+      <li class="nav">nav</li>
+      <li class="main">main</li>
+      <li class="footer">footer</li>
+    </ul>
+  </body>
+</html>

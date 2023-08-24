@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* 
+      float 常规流和浮动流,宽度的百分比是相对于父元素的content-box的宽度
+      absolute 绝对定位流,宽度的百分比是相对于包含块的padding-box的宽度
+      包含块 一个元素的尺寸和位置经常手包含块的影响,大多数情况下,包含块就是这个元素最近的祖先元素和内容区域,但也不总是这样
+      元素的width height padding margin positiong偏移量的百分比值都是相对于包含块的计算而来的
+      确定一个元素的包含块的过程完全取决于这个元素的position属性
+      https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block
+      当元素position的属性为static relative fixed的时候,包含块一般就是最近的祖先块元素(比如block inline-block list-item元素)的content-box
+      当元素position的属性为absolute的时候,包含块就是最近的position属性不为static的祖先元素的padding-box
+      如果position是fixed,包含块就是viewport
+      如果元素position属性时absolute或fixed,包含块可能也是满足以下条件的最近祖先元素
+        transform不为none
+      */
+      body {
+        height: 400px;
+      }
+      .container {
+        position: relative;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        background-color: rebeccapurple;
+      }
+      /* .float {
+        float: left;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+      } */
+      .position {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+      }
+    </style>
+    <div class="container">
+      <!-- <div class="float"></div> -->
+      <div class="position"></div>
+    </div>
+  </body>
+</html>
