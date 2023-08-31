@@ -1,0 +1,58 @@
+.container {
+  width: 1200px;
+  margin: 100px auto;
+  font-size: 12px;
+}
+.container .title {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  line-height: 30px;
+}
+.container .title .commend {
+  font-size: 2em;
+  font-weight: 700;
+}
+.container .title .more {
+  font-size: 1.2em;
+  color: #333;
+}
+.container .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.container .content .item {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 24%;
+  text-align: center;
+  background-color: #fff;
+}
+.container .content .item > * {
+  margin-top: 10px;
+}
+.container .content .item .img {
+  display: flex;
+  justify-content: center;
+}
+.container .content .item .img img {
+  width: 130%;
+}
+.container .content .item .productName {
+  font-size: 1.2em;
+}
+.container .content .item .desc {
+  color: #555;
+}
+.container .content .item .discounts * {
+  display: inline-block;
+}
+.container .content .item .discounts .tag {
+  padding: 0 5px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+.container .content .item .price {
+  font-size: 1.2em;
+}
