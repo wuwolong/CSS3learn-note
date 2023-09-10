@@ -1,3 +1,23 @@
-div {
-  background-color: red;
+@total: 9; // 菜单项的总数
+@angle: 360deg; // 总旋转角度
+@index: 9; // 定义 @index 的初始值
+
+.rotate-menu(@index) when (@index > 0) {
+  .rotate-menu(@index - 1); // 递归调用自身
+
+  @angle-per-item: @angle / @total; // 每个菜单项的旋转角度
+  @rotation: (@angle-per-item * @index); // 当前菜单项的旋转角度
+  nav:hover li:nth-of-type(@{index}) {
+    transform: rotate(@rotation);
+  }
 }
+.rotate(@index) when(@index > 0) {
+  .rotate(@index - 1);
+  @angle-per-item: @angle / @total;
+  @rotation: (@index * @angle) - (@angle-per-item * @index);
+  nav:hover li:nth-of-type(@{index}) > span {
+    transform: rotate(@rotation);
+  }
+}
+.rotate(@total);
+.rotate-menu(@total);

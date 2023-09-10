@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      main {
+        width: 1000px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-style: preserve-3d;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+      }
+      main div {
+        flex-basis: 300px;
+        border: 1px solid #2ecc71;
+        transition: 1s;
+        /* filter: none; */
+      }
+      main:hover div {
+        transform: scale(0.8) translateY(-30px);
+        cursor: pointer;
+        /* filter: blur(15px); */
+      }
+      main div img {
+        width: 100%;
+        vertical-align: top;
+        filter: blur(5px);
+        transition: 1s;
+      }
+      main div img:hover {
+        transform: scale(1.2);
+        filter: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div><img src="./balloons.jpg" alt="" /></div>
+      <div><img src="./balloons.jpg" alt="" /></div>
+      <div><img src="./balloons.jpg" alt="" /></div>
+    </main>
+  </body>
+</html>

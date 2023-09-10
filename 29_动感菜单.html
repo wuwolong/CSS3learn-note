@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.3/less.js"></script>
+    <!-- <link rel="stylesheet" href="./dist/style.css" /> -->
+    <!-- <link rel="stylesheet" href=""> -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav::before {
+        content: 'Noah Wu';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #fff;
+        background-color: #e74c3c;
+      }
+      ul {
+        width: 300px;
+        height: 300px;
+        /* background-color: #000; */
+        transform: scale(0);
+        /* transition: 0.1s; */
+        transform-origin: top left;
+      }
+      nav:hover ul {
+        transform: scale(1);
+      }
+      nav ul li {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #e74c3c;
+        font-size: 40px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: 150px 150px;
+        transition: 1s;
+      }
+      nav ul li span {
+        transition: 1s;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <span><i class="fa fa-address-book" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-adjust" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-book" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-bug" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-compress" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-ban" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-beer" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-bus" aria-hidden="true"></i></span>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
