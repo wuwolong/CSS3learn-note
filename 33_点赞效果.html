@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css"
+      rel="stylesheet"
+    />
+    <style>
+      main {
+        width: 400px;
+        margin: 100px auto;
+        position: relative;
+      }
+      i {
+        position: absolute;
+        font-size: 100px;
+        transition: 3s;
+        color: #f5f5f5;
+      }
+      i:last-child {
+        opacity: 0;
+      }
+      main.heart i:first-child {
+        transform: scale(2);
+        color: red;
+        opacity: 0;
+      }
+      main.heart i:last-child {
+        color: red;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <i class="fa fa-heart" aria-hidden="true" onclick="change()"></i>
+      <i class="fa fa-heart" aria-hidden="true" onclick="change()"></i>
+    </main>
+    <script>
+      function change() {
+        document.querySelector('main').classList.toggle('heart')
+      }
+    </script>
+  </body>
+</html>

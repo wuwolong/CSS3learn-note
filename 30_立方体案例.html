@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform-origin: center center 100px; /*第三个值代表为屏幕往里200px*/
+
+        transform: perspective(900px) rotateY(45deg);
+        transition: 3s;
+      }
+      main:hover {
+        transform: perspective(900px) rotateZ(-180deg);
+      }
+      div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        font-size: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center center 100px; /*第三个值代表为屏幕往里200px*/
+      }
+      div:nth-of-type(1) {
+        background: #1abc9c;
+        transform: rotateY(90deg);
+      }
+      div:nth-of-type(2) {
+        background: #3498db;
+        transform: rotateY(180deg);
+      }
+      div:nth-of-type(3) {
+        background: #9b59b6;
+        transform: rotateY(270deg);
+      }
+      div:nth-of-type(4) {
+        background: #e74c3c;
+        transform: rotateY(360deg);
+      }
+      div:nth-of-type(5) {
+        background: #27ae60;
+        transform-origin: top;
+        transform: rotateX(90deg);
+      }
+      div:nth-of-type(6) {
+        background: #e67e22;
+        transform-origin: bottom;
+        transform: rotateX(-90deg);
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </main>
+  </body>
+</html>

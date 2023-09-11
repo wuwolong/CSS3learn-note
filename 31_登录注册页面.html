@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        transform-style: preserve-3d;
+        transform: perspective(900px);
+        font-size: 60px;
+        backface-visibility: hidden;
+        transition: 1s;
+      }
+      main.login {
+        transform: perspective(900px) rotateY(0deg);
+      }
+
+      main.register {
+        transform: perspective(900px) rotateY(180deg);
+      }
+      main > div {
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        backface-visibility: hidden;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: 2s;
+      }
+      main > div:first-of-type {
+        background: #34495e;
+        transform: rotateY(0deg);
+      }
+      main > div:last-of-type {
+        background: #e74c3c;
+        transform: rotateY(180deg);
+      }
+      main > div > span {
+        font-size: 0.3em;
+      }
+      ul {
+        position: absolute;
+        bottom: 80px;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      ul > a {
+        flex-basis: 20vw;
+        text-transform: uppercase;
+        background: #ecf0f1;
+        text-decoration: none;
+        font-size: 0.3em;
+        color: #34495e;
+        padding: 0.3em;
+        text-align: center;
+        margin-left: 0.3em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <i class="fa fa-home" aria-hidden="true"></i>
+        login
+        <span>houdunren.com</span>
+      </div>
+      <div>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        register
+        <span>houdunren.com</span>
+      </div>
+    </main>
+    <ul>
+      <a href="javascript:;" onclick="change('login')">login</a>
+      <a href="javascript:;" onclick="change('register')">register</a>
+    </ul>
+    <script>
+      const main = document.querySelector('main')
+      function change(tag) {
+        switch (tag) {
+          case 'login':
+            main.classList = ['login']
+            break
+          case 'register':
+            main.classList = ['register']
+            break
+        }
+      }
+    </script>
+  </body>
+</html>
