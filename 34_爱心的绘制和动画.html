@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .heart {
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        background-color: red;
+        position: relative;
+        transform: rotate(45deg) scale(0.5);
+        opacity: 0.8;
+        animation-name: heart;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      .heart::after {
+        content: '';
+        transform: translateX(-100px);
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: red;
+      }
+      .heart::before {
+        content: '';
+        position: absolute;
+        transform: translateY(-100px);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: red;
+      }
+      @keyframes heart {
+        25% {
+          transform: rotate(45deg) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: rotate(45deg) scale(0.5);
+          opacity: 0.8;
+        }
+        75% {
+          transform: rotate(45deg) scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+  </body>
+</html>
