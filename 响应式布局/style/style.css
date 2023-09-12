@@ -1,0 +1,102 @@
+/*中尺寸*/
+@import url(./common.css);
+@import url('./sm-screen.css') screen and (max-width: 768px);
+@import url('./lg-screen.css') screen and (min-width: 768px);
+header {
+  border-top: 3px solid #f33a2f;
+}
+header .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 0;
+}
+header .navbar .logo {
+  font-weight: bold;
+  color: #f33a2f;
+}
+header .navbar input[id='menu'] {
+  display: none;
+}
+header .navbar .collapse li {
+  padding-right: 1rem;
+}
+header .navbar .collapse li a {
+  color: #666;
+  font-weight: bold;
+}
+header .navbar .collapse li a:hover {
+  color: #000;
+}
+header .navbar .collapse li {
+  padding-right: 1rem;
+}
+header .navbar .collapse li a {
+  color: #666;
+  font-weight: bold;
+}
+header .navbar .collapse li a:hover {
+  color: #000;
+}
+header .navbar .user {
+  display: flex;
+}
+header .navbar .user div {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  color: #444;
+}
+header .navbar .user div:first-child {
+  margin-right: 0.5rem;
+}
+@media screen and not (min-width: 1200px) {
+  .container {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .logo {
+    margin-right: 1rem;
+  }
+  .container label {
+    display: none;
+  }
+  .container .collapse {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .container .collapse ul {
+    display: flex;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container:has(input[id='menu']:checked) {
+    border-bottom: 3px solid #f33a2f;
+  }
+  .container .collapse {
+    display: none;
+  }
+  .container label i {
+    color: #777;
+    font-size: 1.5rem;
+  }
+  .container input[id='menu']:checked + .collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container input[id='menu']:checked + .collapse li {
+    margin-top: 1rem;
+  }
+  .container input[id='menu']:checked + .collapse .user {
+    margin-top: 1rem;
+  }
+  .container .logo {
+    margin-right: auto;
+  }
+}

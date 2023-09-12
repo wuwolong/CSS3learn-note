@@ -1,0 +1,8 @@
+.generate-grid-classes(@n) when (@n > 0) {
+  .col-sm-@{n} {
+    grid-column: span @n;
+  }
+  .generate-grid-classes(@n - 1);
+}
+
+.generate-grid-classes(12);
