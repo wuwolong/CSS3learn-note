@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        overflow: hidden;
+        width: 1100px;
+        background-color: rebeccapurple;
+        height: 1111px;
+      }
+      .contanier::after {
+        content: '';
+        display: block;
+        clear: both;/*移动到浮动元素的下面*/
+      }
+
+      .item {
+        border: 1px solid #000;
+        float: left;
+        box-sizing: border-box;
+        width: 221px;
+        height: 320px;
+        /* margin-bottom: 5px; */
+        margin-right: -1px;
+      }
+      .item:last-child {
+        width: 220px;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="contanier">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 100px auto;
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        border: 5px solid #ccc;
+        border-radius: 10px;
+        display: grid;
+        /* grid-template:
+          [header-left] 'one two three' 1fr [header-right]
+          [main-left] 'four five six' 1fr [main-right]
+          [footer-left] 'seven eight nine' 1fr [footer-right]
+          / 1fr 1fr 1fr; */
+        grid-template:
+          [one-row-start] 'one two three' 1fr [one-row-end two-row-start]
+          'four five six' 1fr [two-row-end three-row-start]
+          'seven eight nine' 1fr [three-row-end]
+          / [one-col-start] 1fr [one-col-end two-col-start]
+          1fr [two-col-end three-col-start]
+          1fr [three-col-end];
+      }
+      .dot {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 25px;
+        background-clip: content-box;
+        background-color: #000;
+      }
+      div.dot:first-of-type {
+        grid-area: one;
+      }
+      div.dot:nth-of-type(2) {
+        grid-area: three;
+      }
+      div.dot:nth-of-type(3) {
+        grid-area: seven;
+      }
+      div.dot:nth-of-type(4) {
+        grid-area: five;
+      }
+      div.dot:last-of-type {
+        /* grid-area: nine; */
+        grid-row: three-row-start/span 1;
+        grid-column: three-col-start / span 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>
